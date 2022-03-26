@@ -1,0 +1,48 @@
+@media (min-width: 769px) {
+
+    /* .main__nav {
+        display: flex;
+    } */
+
+    .nav__list + li {
+        margin-left: 40px;
+    }
+
+    .nav__Liink {
+      color: #fff;
+    }
+    
+
+    .body__banner img {
+        /* width: 100%; */
+        height: 100vh;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .body__header {
+        text-align: center;
+    }
+
+    .main__nav {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav__list {
+        margin: 20px 10px 0;
+    }
+
+
+    .body__banner img {
+        /* width: 100%; */
+        height: 50vh;
+    }
+
+    .carousel-item::after {
+        height: 100%;
+    }
+}
