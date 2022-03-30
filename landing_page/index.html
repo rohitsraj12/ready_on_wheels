@@ -30,7 +30,7 @@
   <body>
 
     <div class="body__wrap">
-      <div class="body__header">
+      <div class="body__header" id="home">
         <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
           <div class="container">
             <div class="header__brand">
@@ -45,18 +45,12 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
               <ul class="navbar-nav ml-auto">
-                <!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li class="nav-item"><a href="car.html" class="nav-link">Cars</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li> -->
-                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Testimonials</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#service" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#testimonial" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Enquire Now</a></li>
               </ul>
             </div>
           </div>
@@ -98,13 +92,13 @@
 
       <div class="body__container">
 
-        <section class="ftco-section ftco-no-pt bg-light py-5">
+        <section class="ftco-section ftco-no-pt bg-light py-5" id="contact">
           <div class="container py-5">
             <div class="row no-gutters">
               <div class="col-md-12	featured-top" id="form">
                 <div class="row no-gutters">
                   <div class="col-md-12">
-                    <form action="#" class="request-form ftco-animate bg-form">
+                    <form action="enquire.php" method="POST" class="request-form ftco-animate bg-form">
                       <header class=" mb-3 text-center">
                         <h2>Enquire Now</h2>
                       </header>
@@ -113,19 +107,19 @@
                         <div class="col-12 col-md-4">
                           <div class="form-group">
                             <label for="" class="label">Name</label>
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control" placeholder="Name" name="name">
                           </div>
                         </div>
                         <div class="col-12 col-md-4">
                           <div class="form-group">
                             <label for="" class="label">Email</label>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input type="email" class="form-control" placeholder="Email" name="email">
                           </div>
                         </div>
                         <div class="col-12 col-md-4">
                           <div class="form-group">
                             <label for="" class="label">Phone</label>
-                            <input type="tel" class="form-control" placeholder="Phone">
+                            <input type="tel" class="form-control" placeholder="Phone" name="phone">
                           </div>
                         </div>
                       </div>
@@ -134,52 +128,52 @@
                         <div class="col-12 col-sm-4">
                           <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Booking Type</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="booking_type">
                               <option>Select Type</option>
-                              <option>Passenger Vehicle</option>
-                              <option>Goods Vehicle</option>
+                              <option value="Passenger Vehicle">Passenger Vehicle</option>
+                              <option value="Goods Vehicle">Goods Vehicle</option>
                             </select>
                           </div>
                         </div>
                         <div class="col-12 col-sm-4">
                           <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Vehicle Choice</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="vehicle">
                               <option>Select Vehicle</option>
-                              <option>Piaggio Ape Xtra LDX HT</option>
-                              <option>Mahindra Supro Profit Truck Mini</option>
-                              <option>Mahindra Jeeto</option>
-                              <option>Ashok Leyland Dost+</option>
-                              <option>Ashok Leyland BADA DOST</option>
-                              <option>Tata Intra V10</option>
-                              <option>Mahindra Bolero Pikup CNG</option>
-                              <option>Eicher Pro 2049</option>
-                              <option>Eicher Pro 2095XP</option>
-                              <option>Eicher Pro 3015</option>
-                              <option>Tata 709g</option>
-                              <option>Mahindra Alfa Plus</option>
-                              <option>Mahindra Supro Profit Truck Maxi</option>
-                              <option>Ashok Leyland Dost Strong</option>
-                              <option>Tata 1512</option>
-                              <option>BharatBenz 2823C</option>
-                              <option>Tata Signa 4018.S</option>
-                              <option>Ashok Leyland Ecomet 1615 HE</option>
-                              <option>Tata Signa 5525.S</option>
-                              <option>Eicher Pro 3019</option>
-                              <option>Eicher Pro 2110</option>
-                              <option>Tata Signa 4825.TK</option>
-                              <option>Ashok Leyland 1920</option>
-                              <option>BharatBenz 1617R</option>
+                              <option value="Piaggio Ape Xtra LDX HT">Piaggio Ape Xtra LDX HT</option>
+                              <option value="Mahindra Supro Profit Truck Mini">Mahindra Supro Profit Truck Mini</option>
+                              <option value="Mahindra Jeeto">Mahindra Jeeto</option>
+                              <option value="Ashok Leyland Dost+">Ashok Leyland Dost+</option>
+                              <option value="Ashok Leyland BADA DOST">Ashok Leyland BADA DOST</option>
+                              <option value="Tata Intra V10">Tata Intra V10</option>
+                              <option value="Mahindra Bolero Pikup CNG">Mahindra Bolero Pikup CNG</option>
+                              <option value="Eicher Pro 2049">Eicher Pro 2049</option>
+                              <option value="Eicher Pro 2095XP">Eicher Pro 2095XP</option>
+                              <option value="Eicher Pro 3015">Eicher Pro 3015</option>
+                              <option value="Tata 709g">Tata 709g</option>
+                              <option value="Mahindra Alfa Plus">Mahindra Alfa Plus</option>
+                              <option value="Mahindra Supro Profit Truck Maxi">Mahindra Supro Profit Truck Maxi</option>
+                              <option value="Ashok Leyland Dost Strong">Ashok Leyland Dost Strong</option>
+                              <option value="Tata 1512">Tata 1512</option>
+                              <option value="BharatBenz 2823C">BharatBenz 2823C</option>
+                              <option value="Tata Signa 4018.S">Tata Signa 4018.S</option>
+                              <option value="Ashok Leyland Ecomet 1615 HE">Ashok Leyland Ecomet 1615 HE</option>
+                              <option value="Tata Signa 5525.S">Tata Signa 5525.S</option>
+                              <option value="Eicher Pro 3019">Eicher Pro 3019</option>
+                              <option value="Eicher Pro 2110">Eicher Pro 2110</option>
+                              <option value="Tata Signa 4825.TK">Tata Signa 4825.TK</option>
+                              <option value="Ashok Leyland 1920">Ashok Leyland 1920</option>
+                              <option value="BharatBenz 1617R">BharatBenz 1617R</option>
                             </select>
                           </div>
                         </div>
                         <div class="col-12 col-sm-4">
                           <div class="form-group">
                             <label for="exampleFormControlSelect1" class="label">Roundtrip</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="exampleFormControlSelect1" name="round_trip">
                               <option>Select Type</option>
-                              <option>Yes</option>
-                              <option>No</option>
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
                             </select>
                           </div>
                         </div>
@@ -188,26 +182,26 @@
                         <div class="col-12 col-sm-6 col-lg-3">
                           <div class="form-group">
                             <label for="" class="label">Source Address</label>
-                            <input type="text" class="form-control" placeholder="Source Address">
+                            <input type="text" class="form-control" placeholder="Source Address" name="source_add">
                           </div>
                         </div>
                         <div class="col-12 col-sm-6 col-lg-3">
                           <div class="form-group">
                             <label for="" class="label">Destination Address</label>
-                            <input type="text" class="form-control" placeholder="Destination">
+                            <input type="text" class="form-control" placeholder="Destination" name="destination">
                           </div>
                         </div>
                         <div class="col-12 col-sm-6 col-lg-3">
                           <div class="form-group ml-2">
                             <label for="" class="label">Pick-up Date</label>
-                            <input type="text" class="form-control" id="book_off_date" placeholder="Date">
+                            <input type="text" class="form-control" id="book_off_date" placeholder="Date" name="date">
                           </div>
                         </div>
                         
                         <div class="col-12 col-sm-6 col-lg-3">
                           <div class="form-group">
                             <label for="" class="label">Pick-up Time</label>
-                            <input type="text" class="form-control" id="time_pick" placeholder="Time">
+                            <input type="text" class="form-control" id="time_pick" placeholder="Time" name="time">
                           </div>
                         </div>
                       </div>
@@ -222,7 +216,7 @@
                       </div>
                       
                       <div class="form-group">
-                        <input type="submit" value="Rent Now" class="btn btn-secondary py-3 px-4">
+                        <input type="submit" name="submit" value="Rent Now" class="btn btn-secondary py-3 px-4">
                       </div>
                     </form>
                   </div>
@@ -233,7 +227,7 @@
           </div>
         </section>
 
-        <section class="ftco-section ftco-about">
+        <section class="ftco-section ftco-about" id="about">
           <div class="container">
             <div class="row no-gutters">
               <div class="col-md-6 p-md-5 d-flex justify-content-center align-items-center">
@@ -256,7 +250,7 @@
           </div>
         </section>
         
-        <section class="ftco-section">
+        <section class="ftco-section" id="service">
           <div class="container">
             <div class="row justify-content-center mb-5">
               <div class="col-md-7 text-center heading-section ftco-animate">
@@ -274,7 +268,7 @@
                   </div>
                   <div class="text w-100">
                     <h3 class="heading mb-2">PASSANGER TRANSPORT</h3>
-                    <p>The strength of a design lies as much in the steps taken to create it as in the final result.</p>
+                    <!-- <p>The strength of a design lies as much in the steps taken to create it as in the final result.</p> -->
                   </div>
                 </div>
               </div>
@@ -286,7 +280,7 @@
                   </div>
                   <div class="text w-100">
                     <h3 class="heading mb-2">GOODS TRANSPORT</h3>
-                    <p>Learn why your brand is a valuable component when it comes to your marketing communication and why you don't want to be without one.                    </p>
+                    <!-- <p>Learn why your brand is a valuable component when it comes to your marketing communication and why you don't want to be without one.                    </p> -->
                   </div>
                 </div>
               </div>
@@ -294,7 +288,7 @@
           </div>
         </section>
 
-        <section class="ftco-section ftco-no-pt bg-light pt-5">
+        <section class="ftco-section ftco-no-pt bg-light pt-5" id="gallery">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-12 heading-section text-center ftco-animate mb-5">
@@ -377,7 +371,7 @@
           </div>
         </section>
 
-        <section class="ftco-section testimony-section bg-light">
+        <section class="ftco-section testimony-section bg-light" id="testimonial">
           <div class="container">
             <div class="row justify-content-center mb-5">
               <div class="col-md-7 text-center heading-section ftco-animate">
@@ -464,21 +458,22 @@
                 <h2 class="ftco-heading-2 header__brand"><a href="#" class="logo"><img src="img/brand/logo.png" alt=""></a></h2>
                 <p>Ready on wheels is a futuristic platform offering commission-free vehicle hiring of your choice. May it be for traveling or to transport goods. Choose to travel anywhere all alone or with a bunch of family and friends. </p>
                 <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                  <li class="ftco-animate"><a href="https://www.facebook.com/readyonwheels/?ref=pages_you_manage" target="_blank"><span class="icon-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="https://www.youtube.com/channel/UC-Vlh1NYtJXjPWJ4tTC0xPA" target="_blank"><span class="icon-youtube"></span></a></li>
+                  <li class="ftco-animate"><a href="https://www.instagram.com/readyonwheels/" target="_blank"><span class="icon-instagram"></span></a></li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <div class="ftco-footer-widget mb-4 ml-md-5">
-                <h2 class="ftco-heading-2">Information</h2>
+                <h2 class="ftco-heading-2">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#" class="py-2 d-block">About</a></li>
-                  <li><a href="#" class="py-2 d-block">Service</a></li>
-                  <li><a href="#" class="py-2 d-block">Gallery</a></li>
-                  <li><a href="#" class="py-2 d-block">testimonial</a></li>
-                  <li><a href="#" class="py-2 d-block">Enquire Now</a></li>
+                  <li><a href="#home" class="py-2 d-block">Home</a></li>
+                  <li><a href="#about" class="py-2 d-block">About</a></li>
+                  <li><a href="#service" class="py-2 d-block">Service</a></li>
+                  <li><a href="#gallery" class="py-2 d-block">Gallery</a></li>
+                  <li><a href="#testimonial" class="py-2 d-block">testimonial</a></li>
+                  <li><a href="#contact" class="py-2 d-block">Enquire Now</a></li>
                 </ul>
               </div>
             </div>
