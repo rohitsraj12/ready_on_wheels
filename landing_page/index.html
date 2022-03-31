@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
@@ -127,8 +126,8 @@
                       <div class="row">
                         <div class="col-12 col-sm-4">
                           <div class="form-group">
-                            <label for="exampleFormControlSelect1" class="label">Booking Type</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="booking_type">
+                            <label for="booking_type" class="label">Booking Type</label>
+                            <select class="form-control booking_type" id="booking_type" name="booking_type">
                               <option>Select Type</option>
                               <option value="Passenger Vehicle">Passenger Vehicle</option>
                               <option value="Goods Vehicle">Goods Vehicle</option>
@@ -137,10 +136,10 @@
                         </div>
                         <div class="col-12 col-sm-4">
                           <div class="form-group">
-                            <label for="exampleFormControlSelect1" class="label">Vehicle Choice</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="vehicle">
+                            <label for="vehicle_choice" class="label">Vehicle Choice</label>
+                            <select class="form-control vehicle_choice" id="vehicle_choice" name="vehicle">
                               <option>Select Vehicle</option>
-                              <option value="Piaggio Ape Xtra LDX HT">Piaggio Ape Xtra LDX HT</option>
+                              <!-- <option value="Piaggio Ape Xtra LDX HT">Piaggio Ape Xtra LDX HT</option>
                               <option value="Mahindra Supro Profit Truck Mini">Mahindra Supro Profit Truck Mini</option>
                               <option value="Mahindra Jeeto">Mahindra Jeeto</option>
                               <option value="Ashok Leyland Dost+">Ashok Leyland Dost+</option>
@@ -163,7 +162,7 @@
                               <option value="Eicher Pro 2110">Eicher Pro 2110</option>
                               <option value="Tata Signa 4825.TK">Tata Signa 4825.TK</option>
                               <option value="Ashok Leyland 1920">Ashok Leyland 1920</option>
-                              <option value="BharatBenz 1617R">BharatBenz 1617R</option>
+                              <option value="BharatBenz 1617R">BharatBenz 1617R</option> -->
                             </select>
                           </div>
                         </div>
@@ -538,6 +537,25 @@
   <script src="js/jquery.timepicker.min.js"></script>
   <script src="js/scrollax.min.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $("select.booking_type").change(function(){
+          var selectedCountry = $(".booking_type option:selected").val();
+          $.ajax({
+              type: "POST",
+              url: "select_option.php",
+              data: { vehicle : selectedCountry },
+              success: function(data){
+                $(".vehicle_choice").append(data);
+              console.log(data);
+              } 
+          }).done(function(data){
+              
+          });
+      });
+  });
+  </script>
 
   </body>
 </html>
