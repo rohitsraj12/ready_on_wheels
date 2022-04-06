@@ -144,6 +144,10 @@ p {
     left: 0;
     z-index: -1;
 }
+
+.bg-form option {
+    background-color: #002546f1;
+}
 /* ================================
 
     body footer

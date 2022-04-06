@@ -37,7 +37,7 @@
         mail($to, $subject, $message, $headers);
         mail($to1, $subject, $message, $headers);
 
-        header("location:index.html?status=success");
+        header("location:thank-you.html?status=success");
 
         // echo $message;
 
