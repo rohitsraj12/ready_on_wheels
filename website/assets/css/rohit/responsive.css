@@ -18,6 +18,46 @@
         height: 100vh;
     }
 
+    .nav-item {
+        position: relative;
+    }
+    
+    .sub__nav {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        /* left: -50px; */
+        background-color: #4f4f4f08;
+        padding: 2px;
+    }  
+  
+    .sub__nav-list {
+        margin-bottom: 1px;
+    }
+    
+    .sub__nav-link {
+        display: block;
+        color: #fff;
+        width: 200px;
+        padding: 6px 30px;
+        background-color: #08151dec;
+        /* background-color: #1a4967ec; */
+    }
+    
+    .sub__nav-link:hover {
+        color: #fff;
+        background-color: #e8a412f5;
+    
+    }
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
+        color: #d0cece;
+    }
+    /* .ftco-navbar-light.scrolled .nav-link.active {
+        color: #e8a412f5 !important;
+        border-top: 2px solid  #08151dec;
+    } */
+    
+
 }
 
 @media (max-width: 768px) {
@@ -44,5 +84,18 @@
 
     .carousel-item::after {
         height: 100%;
+    }
+
+    .sub__nav {
+        padding-top: 10px;
+    }
+
+    .sub__nav-link {
+        display: block;
+        color: #fff;
+        padding: 6px 0px;
+        margin-bottom: 1px;
+        background-color: #e8a412f5;
+        /* background-color: #1a4967ec; */
     }
 }
